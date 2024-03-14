@@ -43,22 +43,40 @@ body {
     font-weight: bold;
 }
 
+#burger {
+    display: block;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+#burger:hover {
+    background-color: var(--cor-01);
+}
+
 #menu > ul {
     list-style: none;
 }
 
-#menu-items {
-    display: flex;
-    flex-direction: row;
+#menuitems {
+    display: none;
+    flex-direction: column;
     justify-content: space-around;
-    align-self: center;
+    align-items: center;
     font-family: var(--fonte-secundária);
-}
-
-#menu-items > li > a {
     text-decoration: none;
     color: var(--cor-04);
-    font-weight: bold;    
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#submenu1, #submenu2 {
+    display: none;
+    list-style: none;
+}
+
+#submenu1 > li, #submenu2 > li {
+    margin: 10px 0px;
 }
 
 #secao-imagens {
@@ -79,8 +97,9 @@ body {
 
 #imagens {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin: 10px 0px;
@@ -88,7 +107,6 @@ body {
 
 #imagens > img {
     margin: 10px 0px;
-    width: 100%;
 }
 
 #secao-mapa {
