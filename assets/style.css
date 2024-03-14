@@ -16,11 +16,12 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
     font-family: var(--fonte-principal);
-    background-color: var(--cor-02);
+    background-color: var(--cor-03);
 }
 
 #cabecalho {
@@ -28,7 +29,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--cor-03);
+    color: var(--cor-02);
     padding: 10px;
 }
 
@@ -37,7 +38,7 @@ body {
 }
 
 #cabecalho > p {
-    color: var(--cor-04);
+    color: var(--cor-01);
     margin-top: 15px;
     font-family: var(--fonte-secundária);
     font-weight: bold;
@@ -45,13 +46,14 @@ body {
 
 #burger {
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     cursor: pointer;
+    transition: .1s;
 }
 
 #burger:hover {
-    background-color: var(--cor-01);
+    background-color: var(--cor-04);
 }
 
 #menu > ul {
@@ -65,25 +67,39 @@ body {
     align-items: center;
     font-family: var(--fonte-secundária);
     text-decoration: none;
-    color: var(--cor-04);
+    color: var(--cor-01);
     font-weight: bold;
+}
+
+#menuitems > li {
     cursor: pointer;
+    margin: 10px 0px;
+    color: var(--cor-02);
+}
+
+#menu > ul > div > li:hover {
+    background-color: var(--cor-04);
+    padding: 0px 10px;
+    transition: .1s;   
 }
 
 #submenu1, #submenu2 {
     display: none;
     list-style: none;
+    text-align: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 #submenu1 > li, #submenu2 > li {
-    margin: 10px 0px;
+    margin: 12px 0px;
 }
 
 #secao-imagens {
     margin: 15px 0px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    color: var(--cor-03);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: var(--cor-02);
 }
 
 #secao-imagens > h2, p {
@@ -92,7 +108,7 @@ body {
 
 #secao-imagens > p {
     font-family: var(--fonte-secundária);
-    color: var(--cor-04);
+    color: var(--cor-01);
 }
 
 #imagens {
@@ -107,15 +123,16 @@ body {
 
 #imagens > img {
     margin: 10px 0px;
+    border: 2px solid white;
 }
 
 #secao-mapa {
-    color: var(--cor-03);
+    color: var(--cor-02);
 }
 
-#secao-mapa > div#mapa {
+#mapa {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -123,37 +140,43 @@ body {
 }
 
 #secao-contato {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 #secao-contato h2 {
-    color: var(--cor-03);
+    color: var(--cor-02);
 }
 
 #secao-contato > h2, div {
     margin: 15px 0px;
 }
 
-#secao-contato > div#contato {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#contato {
+    display: block;
+    text-align: center;
 }
 
-#secao-contato > div#contato > ul {
+#contato > ul {
     list-style: none;
 }
 
-#secao-contato > div#contato > ul > li > a {
+#contato > ul > li > a {
     text-decoration: none;
-    color: var(--cor-04);
+    color: var(--cor-01);
     font-family: var(--fonte-secundária);
+}
+
+.imagem-centralizada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
 }
 
 footer {
     display: block;
     text-align: center;
     font-weight: bold;
+    color: white;
 }
